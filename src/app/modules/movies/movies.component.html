@@ -1,0 +1,15 @@
+<section class="d-flex aling-item-center justify-content-center">
+    <form>
+    <input type="text" placeholder="Búsqueda..."
+     id="buscador" >
+    </form>
+</section>
+
+<div class="content">
+  <div class="row">
+    <div *ngFor="let movie of movies">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
+    </div>
+  </div>
+</div>
+
