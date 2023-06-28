@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  private apikey= 'f1b67aad67001434946ef60417787d5b';
   private urlApi = 'https://api.themoviedb.org/3/discover/movie';
 
   constructor(private http: HttpClient) {}
@@ -14,8 +17,8 @@ export class ApiService {
     const apiHeaders = new HttpHeaders({
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMWI2N2FhZDY3MDAxNDM0OTQ2ZWY2MDQxNzc4N2Q1YiIsInN1YiI6IjY0OTI1YWFjNGJhNTIyMDBjNTFlNmRlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b8cC_C-9ykQJBAy03DvN85LnrGaVdcGjY9nwiT9DJ60'
   });
-  
+  const params = new HttpParams().set('language', 'es');
 
-    return this.http.get<any>(this.urlApi, { headers: apiHeaders });
+    return this.http.get<any>(this.urlApi,{ headers: apiHeaders, params });
   }
 }

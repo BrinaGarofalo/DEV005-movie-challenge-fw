@@ -1,0 +1,61 @@
+
+.pagina{
+    padding: 5px;
+    margin: 2px;
+   color: black;
+   font-size:xx-large;
+   font-family: 'Brush Script MT';
+   margin: 2px;
+
+   }
+.buscador{
+    width: 600px;
+    height: 30px;
+    margin: 5px;
+    border:3px solid black;
+    margin: 5px;
+
+}
+#btnInicio{
+   
+    background-color: aliceblue;
+    width: 60px;
+    height: 40px;
+    margin: 10px;
+}
+#categoría{
+    background-color: aliceblue;
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+}
+#popular{
+    background-color: aliceblue;
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+}
+.content{
+    background-color: rgb(168, 229, 240);
+    margin: 15px;
+
+}
+div.row{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex: 3;
+
+}
+.movies{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex: 3;
+
+
+
+}
+    
+
+
