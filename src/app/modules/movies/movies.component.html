@@ -1,44 +1,18 @@
-<section class="d-flex aling-item-center justify-content-center">
-    <form>
-     <p class="pagina">Movie Library</p>
-    <input type="text" placeholder="Búsqueda..." class="buscador" name="titleMov" autofocus [(ngModel)]="titleMov" (input)="busquedaMov()" >
-    </form>
-</section>
 
-<section class="container1, d-flex aling-item-center justify-content-center " >
-  <button type="button" id="btnInicio" >Inicio</button>
-  <div class="selectors">
-    <select id="categoría">
-      <option disabled selected hidden>Categoría</option>
-      <option value="Acción">Acción</option>
-      <option value="Comedia">Comedia</option>
-      <option value="Drama">Drama</option>
-      <option value="Animadas">Animadas</option>
-      <option value="Fantasia">Fantasia</option>
-      <option value="Horror">Horror</option>
-      <option value="Romance">Romance</option>
-      <option value="Animación">Animación</option>
-      <option value="Misterio">Misterio</option>
-    </select>
-    <select id="popular">
-      <option disabled selected hidden>Populares</option>
-      <option value="semana">Semanal</option>
-      <option value="mes">Mensual</option>
-      <option value="todos">Todas</option>
-    </select>
-  </div>
-</section>
 <div class="content">
-  <div class="row">
+
     <div *ngFor="let movie of movies" class="movies">
       <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
     </div>
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let movie of filterMov" class="col-md-4">
-          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
-          <p>{{ movie.title }}</p>
-        </div>
-  </div>
+    
 </div>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let movie of filterMov" class="col-md-4">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
+      <p>{{ movie.title }}</p>
+    </div>
 
+<div>
+  
+</div>

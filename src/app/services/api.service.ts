@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apikey= 'f1b67aad67001434946ef60417787d5b';
+
   private urlApi = 'https://api.themoviedb.org/3/discover/movie';
 
   constructor(private http: HttpClient) {}
@@ -21,4 +21,7 @@ export class ApiService {
 
     return this.http.get<any>(this.urlApi,{ headers: apiHeaders, params });
   }
+
 }
+// https://developer.themoviedb.org/reference/genre-movie-list
+//https://developer.themoviedb.org/reference/genre-movie-list

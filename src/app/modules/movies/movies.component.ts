@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IMovie } from 'src/app/models/Movie.model';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -7,8 +8,8 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movies: any[] = [];
-  filterMov: any[] = [];
+  movies:  IMovie []= [];
+  filterMov: IMovie []= [];
   titleMov: string = '';
 
   constructor(private apiService: ApiService) {}
@@ -31,10 +32,11 @@ export class MoviesComponent implements OnInit {
   
   busquedaMov() {
     const searchTerm = this.titleMov.toLocaleLowerCase();
-    this.filterMov = this.movies.filter((movie: any) =>
+    this.filterMov = this.movies.filter((movie) =>
     movie.title.toLowerCase().includes(searchTerm)
     );
   }
 }
+
 
 
