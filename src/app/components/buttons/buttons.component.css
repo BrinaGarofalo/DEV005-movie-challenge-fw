@@ -5,9 +5,12 @@ h1{
     align-items: center;
     margin: 20px ;
     padding: 10px;
-    background-color: aquamarine;
+    background-color:#001C30;
     margin: 5px;
     border-radius: 5px;
+    color:#DAFFFB;
+    font-family:'Brush Script MT';
+    font-size:xx-large;
 
 }
 #btnInicio{
@@ -16,7 +19,7 @@ h1{
     align-items: center;
     margin: 10px ;
     padding: 10px;
-    background-color: aquamarine;
+    background-color:#957777;
     margin: 5px;
     border-radius: 5px;
     width: 50px;
@@ -28,7 +31,7 @@ h1{
     align-items: center;
     margin: 20px ;
     padding: 10px;
-    background-color: rgba(115, 200, 226, 0.486);
+    background-color: #64CCC5;
     margin: 5px;
     border-radius: 5px;
     width: 600px;
@@ -40,21 +43,40 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 #gender{
    
     margin: 20px ;
     padding: 10px;
-    background-color: rgba(115, 200, 226, 0.486);
+    background-color:#64CCC5;
     margin: 5px;
     border-radius: 5px;
+    border: 2px solid black;
 }
 #popular{
     
     margin: 20px ;
     padding: 10px;
-    background-color: rgba(115, 200, 226, 0.486);
+    background-color: #64CCC5;
     margin: 5px;
     border-radius: 5px;
+    border: 2px solid black;
+    
    
+}
+a{
+    background-color:#64CCC5;
+border: 2px solid black;
+border-radius: 5px;
+    margin: 5px;
+    width: 70px;
+    height: 30px;
+
+}
+section{
+    padding: 20px;
+    background-color:#176B87;
+    border-radius: 15px;
+    margin: 5px;
 }

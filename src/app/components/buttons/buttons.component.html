@@ -1,15 +1,16 @@
 
 <header>
-    <h1>Movie Library</h1>
+  <h1>Movie Library</h1>
 </header>
+
 <section>
-  <div>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    <button type="button" id="btnInicio" >Home</button>
-  </div>
-</section>
-<section>
+  <div *ngIf="!userLoginOn" >
+    <a class="nav-link" routerLink="/login">SignIn</a>
+   </div>
+   <div *ngIf="userLoginOn">
+    <a class="nav-link"routerLink="/login">SignOut</a>
+   </div>
+   
   <section class="container1, d-flex aling-item-center justify-content-center " >
     <form>
      <input type="text" placeholder="Búsqueda..." class="buscador" name="titleMovie" autofocus="autofocus"  >
@@ -49,3 +50,4 @@
     </div>
   </section>
   
+<app-movies></app-movies>
