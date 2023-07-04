@@ -18,13 +18,24 @@ export class LoginComponent implements OnInit{
   constructor(private FormBuilder:FormBuilder, private router:Router){}
 ngOnInit():void{}
 
+get email(){
+  return this.loginForm.controls.email;
+}
+
+get password(){
+  return this.loginForm.controls.password;
+}
+
+
 login() {
   if(this.loginForm.valid){
-    console.log("llamar servicio")
-   this.router.navigate(['/buttons'])
+    console.log("llamar servicio");
+   this.router.navigate(['/buttons']);
+   this.loginForm.reset();
   }
   else {
-    console.error("error")
+    this.loginForm.markAllAsTouched();
+  
   }
 }
 }

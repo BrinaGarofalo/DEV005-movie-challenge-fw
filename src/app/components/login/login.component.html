@@ -9,11 +9,24 @@
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email</label>
     <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-   
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+    
+      <div *ngIf="email.errors?.['required']">
+        Email is required.
+      </div>
+      <div *ngIf="email.errors?.['email']">
+        Email  must have a valid format.
+      </div>
+    </div>
+
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+      <div *ngIf="password.errors?.['required']">
+        Password is required.
+      </div>
   </div>
   <div>
   <section class="container1, d-flex aling-item-center justify-content-center " >

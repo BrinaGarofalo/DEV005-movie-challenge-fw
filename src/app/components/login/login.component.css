@@ -1,3 +1,11 @@
+
+.ng-valid:not(form).ng-touched{
+    border:5px solid green;
+}
+.ng-invalid:not(form).ng-touched{
+    border:5px solid red;
+}
+
 section{
     display:flex;
     justify-content:center;

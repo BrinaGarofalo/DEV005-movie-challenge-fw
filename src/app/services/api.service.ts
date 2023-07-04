@@ -23,5 +23,4 @@ export class ApiService {
   }
 
 }
-// https://developer.themoviedb.org/reference/genre-movie-list
-//https://developer.themoviedb.org/reference/genre-movie-list
+
