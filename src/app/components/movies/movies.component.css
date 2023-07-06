@@ -1,12 +1,15 @@
 
-.content{
-    margin: 20px ;
+.container{
+    margin: 30px ;
     padding: 10px;
     background-color:#64CCC5;
-    margin: 5px;
+    margin: 30px;
     border-radius: 5px;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
    
+    
 }
 h1{
     color:#DAFFFB;
@@ -16,7 +19,11 @@ h1{
     align-items: center;
     justify-content: center;
 }
-
+#title{
+    color:aliceblue;
+    font-size:large;
+    margin: 5px;
+}
 
 
 

@@ -6,7 +6,7 @@
   <div class="container" *ngIf="selectMov === null">
     <div class="row">
       <div *ngFor="let movie of filterMov; let i = index"  class="col-xs-12 col-sm-4 col-md-3 ">
-        <div class="movieCard" (click)="movieIndex(i)" [class.active] ="selectMov === i">
+        <div class="movie" (click)="movieIndex(i)" [class.active] ="selectMov === i">
         <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
         <p id="title" [hidden]="selectMov!== i">{{ movie.title }}</p>
         <p id="title">{{ movie.title}}

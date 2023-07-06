@@ -1,4 +1,4 @@
-export interface genderId= [
+export const genderId =[
     {
       "id": 28, 
       "name": "Action" },
@@ -75,7 +75,7 @@ export interface genderId= [
       "name": "Western"
     }
   ];
-}
+
 
   //'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMWI2N2FhZDY3MDAxNDM0OTQ2ZWY2MDQxNzc4N2Q1YiIsInN1YiI6IjY0OTI1YWFjNGJhNTIyMDBjNTFlNmRlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b8cC_C-9ykQJBAy03DvN85LnrGaVdcGjY9nwiT9DJ60' \
    //  --header 'accept: application/json'
