@@ -1,13 +1,12 @@
 
 .container{
-    margin: 30px ;
     padding: 10px;
     background-color:#64CCC5;
-    margin: 30px;
+    margin: 10px;
     border-radius: 5px;
     border: 2px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
    
     
 }
