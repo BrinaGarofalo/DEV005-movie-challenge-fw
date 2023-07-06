@@ -22,7 +22,7 @@
     </section>
   <section>
     <div class="selectors">
-      <select id="gender">
+      <select id="gender" [(ngModel)]="selectGender">
         <option disabled selected hidden>Gender</option>
         <option value=28>Action</option>
         <option value=12>Adventure</option>
@@ -46,7 +46,7 @@
 
 
       </select>
-      <select id="popular">
+      <select id="popular" [(ngModel)]="selectPopular" >
         <option disabled selected hidden>Popular</option>
         <option value="semana">Week</option>
         <option value="mes">Month</option>
@@ -55,5 +55,6 @@
     </div>
   </section>
   
-<app-movies [filter-text]="titleMov"></app-movies>
-
+<app-movies [filter-text]="titleMov" ></app-movies>
+<app-movies [filter-gender]="selectGender" ></app-movies>
+<app-movies [filter-popular]="selectPopular" ></app-movies>

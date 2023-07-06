@@ -11,11 +11,18 @@ export class ButtonsComponent implements OnInit {
   movies:  IMovie []= [];
   filterMov: IMovie []= [];
   titleMov: string = '';
+  selectGender: number | null = null;
+  selectPopular: string = '';
+
+ 
+
 
   constructor( ) {}
 
   ngOnInit(): void {
    
   }
-
+  
+    
+   
 }
