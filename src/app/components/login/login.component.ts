@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginRequest } from 'src/app/models/Movie.model';
+
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,9 @@ export class LoginComponent implements OnInit{
     password: ['',Validators.required],
   })
 
-  constructor(private FormBuilder:FormBuilder, private router:Router){}
+  constructor(private FormBuilder:FormBuilder, private router:Router,){
+
+  }
 ngOnInit():void{}
 
 get email(){
@@ -29,7 +33,7 @@ get password(){
 
 login() {
   if(this.loginForm.valid){
-    console.log("llamar servicio");
+    //this.LoginService.login(this.loginForm.value as LoginRequest);
    this.router.navigate(['/buttons']);
    this.loginForm.reset();
   }

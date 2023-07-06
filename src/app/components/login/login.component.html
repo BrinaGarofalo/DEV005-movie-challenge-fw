@@ -1,15 +1,15 @@
 
 <header>
-  <h1>Register Movie Library</h1>
+  <h1>Welcome Movie Library</h1>
 </header>
 <p *ngIf="!userLoginOn">User Not authenticated</p>
 <p *ngIf="userLoginOn">Authenticated User</p>
-<section>
+<section >
 <form [formGroup]="loginForm">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+    <input formControlName="email" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-text-danger">
     
       <div *ngIf="email.errors?.['required']">
         Email is required.
@@ -22,8 +22,8 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+    <input formControlName="password" type="password" class="form-control" id="InputPassword1">
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert-text-danger">
       <div *ngIf="password.errors?.['required']">
         Password is required.
       </div>
@@ -32,5 +32,4 @@
   <section class="container1, d-flex aling-item-center justify-content-center " >
   <button type="submit" (click)="login()" class="btn btn-primary">Sign In</button>
    
- 
 </section>

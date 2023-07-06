@@ -5,39 +5,44 @@
 
 <section>
   <div *ngIf="!userLoginOn" >
-    <a class="nav-link" routerLink="/login">SignIn</a>
+    <a class="nav-link"routerLink="/login">Logout</a>
+
    </div>
    <div *ngIf="userLoginOn">
-    <a class="nav-link"routerLink="/login">SignOut</a>
+    <a class="nav-link" routerLink="/login">SignIn</a>
    </div>
    
   <section class="container1, d-flex aling-item-center justify-content-center " >
     <form>
-     <input type="text" placeholder="Búsqueda..." class="buscador" name="titleMovie" autofocus="autofocus"  >
+
+     <input type="text" placeholder="Search..." class="buscador" name="titleMovie" autofocus="autofocus" [(ngModel)]="titleMov"  >
+
+
      </form>
     </section>
   <section>
     <div class="selectors">
       <select id="gender">
         <option disabled selected hidden>Gender</option>
-        <option value="Acción">Action</option>
-        <option value="Comedia">Adventure</option>
-        <option value="Drama">Drama</option>
-        <option value="Animadas">Animation</option>
-        <option value="Fantasia">Fantasy</option>
-        <option value="Horror">Horror</option>
-        <option value="Romance">Crime</option>
-        <option value="Misterio">Mistery</option>
-        <option value="Documental">Documentary</option>
-        <option value="Familiar">Family</option>
-        <option value="Historia">History</option>
-        <option value="Musical">Music</option>
-        <option value="Romances">Romance</option>
-        <option value="Ciencia Ficcion">Science Fiction</option>
-        <option value="Suspenso">Thriller</option>
-        <option value="Peliculas de tv">TV Movie</option>
-        <option value="Guerra">War</option>
-        <option value="Occidental">Western</option>
+        <option value=28>Action</option>
+        <option value=12>Adventure</option>
+        <option value=18>Drama</option>
+        <option value=16>Animation</option>
+        <option value=35>Comedy</option>
+        <option value=14>Fantasy</option>
+        <option value=27>Horror</option>
+        <option value=80>Crime</option>
+        <option value=9648>Mistery</option>
+        <option value=99>Documentary</option>
+        <option value=10751>Family</option>
+        <option value=36>History</option>
+        <option value=10402>Music</option>
+        <option value=10749>Romance</option>
+        <option value=878>Science Fiction</option>
+        <option value=53>Thriller</option>
+        <option value=10770>TV Movie</option>
+        <option value=10752>War</option>
+        <option value=37>Western</option>
 
 
       </select>
@@ -50,4 +55,5 @@
     </div>
   </section>
   
-<app-movies></app-movies>
+<app-movies [filter-text]="titleMov"></app-movies>
+

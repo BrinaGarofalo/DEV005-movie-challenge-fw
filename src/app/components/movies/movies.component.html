@@ -1,20 +1,23 @@
 <header>
-  <h1>Movie Library</h1>
+  <h1> Top Popular</h1>
 </header>
 
-<div class="content">
-
-    <div *ngFor="let movie of movies" class="movies">
-      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
-    </div>
-    
+<div>
+  <div class="container" *ngIf="selectMov === null">
+    <div class="row">
+      <div *ngFor="let movie of filterMov; let i = index"  class="col-xs-12 col-sm-4 col-md-3 ">
+        <div class="movieCard" (click)="movieIndex(i)" [class.active] ="selectMov === i">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
+        <p id="title" [hidden]="selectMov!== i">{{ movie.title }}</p>
+        <p id="title">{{ movie.title}}
+      </div>
 </div>
-<!-- <div class="container">
-  <div class="row">
-    <div *ngFor="let movie of filterMov" class="col-md-4">
-      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Portada de la película" class="img-fluid movie-poster">
-      <p>{{ movie.title }}</p>
-    </div>
 
-<div> -->
+
+
+
+
+   
+
+
   

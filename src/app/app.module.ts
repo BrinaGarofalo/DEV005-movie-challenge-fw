@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import {LoginComponent} from './components/login/login.component';
-import { ButtonsComponent } from './components/buttons/buttons.component'
+import { ButtonsComponent } from './components/buttons/buttons.component';
+import { CardmoviesComponent } from './components/cardmovies/cardmovies.component'
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component'
     MoviesComponent,
     LoginComponent,
     ButtonsComponent,
+    CardmoviesComponent,
  
 
   
