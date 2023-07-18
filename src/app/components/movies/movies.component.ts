@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { genderId } from 'src/app/gender';
+
 import { IMovie } from 'src/app/models/Movie.model';
-import { ApiService } from 'src/app/services/api.service';
+import { ApiService } from '../../services/api.service';
 
 
 @Component({
@@ -18,8 +18,7 @@ export class MoviesComponent implements OnInit, OnChanges {
   moviePoster: string | null = null;
   selectGender: number | null = null;
   selectPopular: string = '';
-  genreMap: any = genderId;
-
+  
 
   @Input('filter-text') filterText: string = '';
   @Input('filter-gender') filterGender: number | null = null;
@@ -35,12 +34,12 @@ export class MoviesComponent implements OnInit, OnChanges {
     }
   }
 
-  
+
 
   ngOnInit(): void {
     this.mostrarData();
-   
-    
+
+
   }
 
   mostrarData() {
@@ -48,7 +47,7 @@ export class MoviesComponent implements OnInit, OnChanges {
       (data: any) => {
         this.movies = data.results;
         this.filterMov = [...this.movies];
-      
+
       },
       (error: any) => {
         console.error(error);
@@ -62,7 +61,7 @@ export class MoviesComponent implements OnInit, OnChanges {
     movie.title.toLowerCase().includes(searchTerm)
     );
    }
- 
+
    movieIndex(index: number) {
     if (this.selectMov === index) {
       this.selectMov = null;
@@ -86,8 +85,8 @@ export class MoviesComponent implements OnInit, OnChanges {
     } else {
       this.filterMov = this.movies;
     }
-  
- 
+
+
   }
 
 
@@ -101,13 +100,8 @@ export class MoviesComponent implements OnInit, OnChanges {
         .filter((movie: IMovie) => movie.vote_average >= 8)
         .slice(0, 5);
     }
-    debugger
+  
 
-  }
-
-  getGenderName(genreId: number): string {
-    const genre = this.genreMap.find((g: any) => g.id === genreId);
-    return genre ? genre.name : '';
   }
 
 

@@ -1,28 +1,36 @@
-import { Component } from '@angular/core';
-import { IMovie } from 'src/app/models/Movie.model';
-import { genderId } from 'src/app/gender';
+import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { Movie } from 'src/app/models/movies.interface';
+
 @Component({
   selector: 'app-cardmovies',
   templateUrl: './cardmovies.component.html',
   styleUrls: ['./cardmovies.component.css']
 })
-export class CardmoviesComponent {
-  filterMov: IMovie []= [];
-  selectMov: number | null= null;
-  selectedMovieIndex: number | null = null;
-  moviePoster: string | null = null;
-  genderMap: any = genderId;
-
-constructor(){}
-
-ngOnInit(): void {}
+export class CardmoviesComponent implements OnInit {
+  @Input() movie: any;
+  movies: Movie[] = [];
 
 
+  constructor(private apiService: ApiService) { }
 
-getGenderName(genreId: number): string {
-  const genre = this.genderMap.find((g: any) => g.id === genreId);
-  return genre ? genre.name : '';
- }
 
+  ngOnInit(): void {
+    this.mostrarData();
+
+
+  }
+    mostrarData() {
+      this.apiService.getData().subscribe(
+        (data: any) => {
+          this.movies = data.results;
+        
+  
+        },
+        (error: any) => {
+          console.error(error);
+      })
+  }
 
 }
+
